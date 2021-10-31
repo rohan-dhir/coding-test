@@ -37,24 +37,20 @@
   }
 }
 
-.slider {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .image {
   width: 1000px;
   height: 600px;
   border-radius: 10px;
 }
 
+.slider {
+  height: 100vh;
+}
+
 .rightButton {
-  position: absolute;
+  position: relative;
   top: 50%;
-  right: 32px;
+  left: 95%;
   font-size: 48px;
   color: white;
   z-index: 10;
@@ -64,9 +60,8 @@
 }
 
 .leftButton {
-  position: absolute;
+  position: relative;
   top: 50%;
-  left: 32px;
   font-size: 48px;
   color: white;
   z-index: 10;
@@ -91,11 +86,25 @@
   border-radius: 0px;
   border: 0;
   font-size: 1rem;
-  left: 50%;
   z-index: 10;
   cursor: pointer;
   float:left;
   transition: 0.3s ease;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carouselSection {
+  position: relative;
+  width:80%;
+  display:block;
+  margin-top: -60px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .options:hover{
@@ -104,17 +113,38 @@
   border-color: #04b6ce;
 }
 
-.options:active {
+.options.active {
   background-color: #d4c219;
+  border-color: #d4c219;
 }
 
 .slide {
   opacity: 0;
   transition-duration: 1s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
 }
 
 .slide.active {
   opacity: 1;
   transition-duration: 1s;
   transform: scale(1.08);
+}
+
+.slider-image {
+  display: block;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 750px;
+}
+
+.spinner {
+  position: absolute;
+  color:white;
+  font-size:4rem;
+  margin-top:30%;
+  left: 50%;
 }
